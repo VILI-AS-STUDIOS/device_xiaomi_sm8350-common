@@ -85,6 +85,9 @@ function blob_fixup() {
         odm/etc/init/vendor.xiaomi.sensor.citsensorservice@2.0-service.rc)
             sed -i 's/group system input/group system input\n    task_profiles ServiceCapacityLow/' "${2}"
             ;;
+        vendor/lib64/libwa_sat.so)
+            sed -i 's/\/system\/lib64\([^\/]\)/\/vendor\/lib64\1/g' "${2}"
+            ;;
     esac
 }
 
