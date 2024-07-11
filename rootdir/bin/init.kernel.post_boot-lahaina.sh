@@ -201,7 +201,7 @@ if [ $rev == "1.0" ]; then
 else
 	echo 1209600 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/hispeed_freq
 fi
-echo 300000 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
+echo 691200 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
 echo 1 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/pl
 
 # configure input boost settings
