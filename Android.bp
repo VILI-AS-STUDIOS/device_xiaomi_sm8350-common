@@ -9,7 +9,7 @@ soong_namespace {
         "hardware/xiaomi",
         "hardware/google/interfaces",
         "hardware/google/pixel",
-        "hardware/aosp/interfaces/power-libperfmgr",
+        "hardware/lineage/interfaces/power-libperfmgr",
         "hardware/qcom-caf/common/libqti-perfd-client",
     ],
 }
