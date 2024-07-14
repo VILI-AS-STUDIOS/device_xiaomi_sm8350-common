@@ -210,10 +210,6 @@ on boot
     chown system system /sys/class/mi_display/disp-DSI-1/dynamic_fps
     chmod 0444 /sys/class/mi_display/disp-DSI-1/dynamic_fps
 
-on property:sys.boot_completed=1
-    # Enable PowerHAL hint processing
-    setprop vendor.powerhal.init 1
-
 on init && property:ro.boot.mode=charger
     mount_all /vendor/etc/charger_fstab.qcom --early
     write /sys/kernel/boot_adsp/boot 1
