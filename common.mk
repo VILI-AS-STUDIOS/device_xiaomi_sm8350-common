@@ -465,9 +465,6 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.2.vendor \
     libqti-perfd-client
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
-
 PRODUCT_PACKAGES += \
     libssl.vendor
 
