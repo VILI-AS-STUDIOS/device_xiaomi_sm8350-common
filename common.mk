@@ -649,7 +649,3 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libpng.vendor
-
-PRODUCT_SYSTEM_PROPERTIES += \
-    ro.miui.notch=1 \
-    ro.product.mod_device=vili_global
