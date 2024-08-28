@@ -462,10 +462,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Enable adpf cpu hint session for SurfaceFlinger and HWUI
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    debug.sf.enable_adpf_cpu_hint=true \
+    debug.hwui.use_hint_manager=true
+
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.lineage-libperfmgr \
-    android.hardware.power@1.2.vendor \
+    android.hardware.power-service.pixel-libperfmgr \
     libqti-perfd-client
 
 PRODUCT_COPY_FILES += \
@@ -479,11 +483,9 @@ PRODUCT_COPY_FILES += \
 
 # Preopt critical applications
 PRODUCT_DEXPREOPT_SPEED_APPS += \
+    TrebuchetQuickStep \
     Settings \
-    SystemUI \
-    SettingsGoogle \
-    SystemUIGoogle \
-    GoogleDialer
+    SystemUI
 
 # Protobuf
 PRODUCT_PACKAGES += \
@@ -543,7 +545,6 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/google/interfaces \
     hardware/google/pixel \
-    hardware/lineage/interfaces/power-libperfmgr \
     hardware/qcom-caf/common/libqti-perfd-client \
     hardware/xiaomi
 
